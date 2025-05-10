@@ -26,9 +26,9 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CategoryServiceImpl implements CategoryService {
     
-    private CategoryRepository categoryRepository;
-    private FileUploadService fileUploadService;
-    private ItemRepository itemRepository;
+    private final CategoryRepository categoryRepository;
+    private final FileUploadService fileUploadService;
+    private final ItemRepository itemRepository;
 
     public CategoryResponse add(CategoryRequest request, MultipartFile file) throws IOException {
         //String imgUrl = fileUploadService.uploadFile(file);
